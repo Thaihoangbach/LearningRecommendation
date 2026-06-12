@@ -1,0 +1,1645 @@
+{
+  "metadata": {
+    "name": "Vietnamese AI/NLP/LLM Learning Recommendation Knowledge Graph",
+    "version": "0.1.0",
+    "language": "vi",
+    "created_for": "Seminar demo for KG-contextualized LLM chatbot",
+    "description": "A compact, curated Vietnamese knowledge graph for explaining AI/NLP/LLM learning-path recommendations. Course backbone is based on public UET AI curriculum pages, while skills and goals are manually enriched from common AI/NLP/LLM course taxonomies.",
+    "design_note": "Course names and explanations are Vietnamese for presentation. Node IDs and relation names are ASCII for implementation stability."
+  },
+  "sources": [
+    {
+      "id": "src_uet_ai_2025_content",
+      "name": "UET AI curriculum content, QH-2025 onward",
+      "url": "https://uet.edu.vn/chuong-trinh-dao-tao-nganh-tri-tue-nhan-tao-9/",
+      "used_for": ["course", "course_code", "credits", "prerequisite", "knowledge_block"]
+    },
+    {
+      "id": "src_uet_ai_2025_plan",
+      "name": "UET AI expected semester plan, QH-2025 onward",
+      "url": "https://uet.vnu.edu.vn/chuong-trinh-dao-tao-nganh-tri-tue-nhan-tao-10/",
+      "used_for": ["semester", "required_or_elective"]
+    },
+    {
+      "id": "src_uet_ai_2025_plo",
+      "name": "UET AI program learning outcomes",
+      "url": "https://uet.edu.vn/chuong-trinh-dao-tao-nganh-tri-tue-nhan-tao-8/",
+      "used_for": ["program_goal", "plo"]
+    },
+    {
+      "id": "src_curated_skills",
+      "name": "Human-curated enrichment from common AI/NLP/LLM course knowledge",
+      "url": null,
+      "used_for": ["skill", "topic", "benefit", "career_goal"]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "program_uet_ai",
+      "type": "Program",
+      "name": "Chương trình đào tạo ngành Trí tuệ nhân tạo",
+      "institution": "Trường Đại học Công nghệ - Đại học Quốc gia Hà Nội",
+      "language": "Tiếng Việt",
+      "degree": "Cử nhân",
+      "total_credits": 135,
+      "source": "src_uet_ai_2025_content"
+    },
+    {
+      "id": "topic_programming_foundation",
+      "type": "Topic",
+      "name": "Nền tảng lập trình"
+    },
+    {
+      "id": "topic_math_foundation",
+      "type": "Topic",
+      "name": "Nền tảng toán học"
+    },
+    {
+      "id": "topic_knowledge_search",
+      "type": "Topic",
+      "name": "Biểu diễn tri thức và tìm kiếm"
+    },
+    {
+      "id": "topic_machine_learning",
+      "type": "Topic",
+      "name": "Học máy"
+    },
+    {
+      "id": "topic_deep_learning",
+      "type": "Topic",
+      "name": "Học sâu"
+    },
+    {
+      "id": "topic_nlp",
+      "type": "Topic",
+      "name": "Xử lý ngôn ngữ tự nhiên"
+    },
+    {
+      "id": "topic_generative_ai",
+      "type": "Topic",
+      "name": "Trí tuệ nhân tạo tạo sinh"
+    },
+    {
+      "id": "topic_ai_systems",
+      "type": "Topic",
+      "name": "Hệ thống trí tuệ nhân tạo"
+    },
+    {
+      "id": "topic_recommender_systems",
+      "type": "Topic",
+      "name": "Hệ thống khuyến nghị"
+    },
+    {
+      "id": "goal_nlp_engineer",
+      "type": "Goal",
+      "name": "Trở thành kỹ sư NLP",
+      "description": "Có khả năng xây dựng, đánh giá và triển khai các hệ thống xử lý ngôn ngữ tự nhiên."
+    },
+    {
+      "id": "goal_llm_app_builder",
+      "type": "Goal",
+      "name": "Xây dựng ứng dụng LLM",
+      "description": "Có khả năng thiết kế prompt, tích hợp mô hình ngôn ngữ lớn và đánh giá chất lượng phản hồi."
+    },
+    {
+      "id": "goal_rag_system_builder",
+      "type": "Goal",
+      "name": "Xây dựng hệ thống RAG",
+      "description": "Có khả năng kết hợp truy hồi thông tin, embedding và LLM để xây dựng hệ thống hỏi đáp theo tài liệu."
+    },
+    {
+      "id": "goal_ai_system_engineer",
+      "type": "Goal",
+      "name": "Phát triển hệ thống AI thực tế",
+      "description": "Có khả năng thiết kế, triển khai, kiểm thử và vận hành hệ thống AI trong môi trường thực tế."
+    },
+    {
+      "id": "goal_data_decision",
+      "type": "Goal",
+      "name": "Phân tích dữ liệu và ra quyết định",
+      "description": "Có khả năng khai phá dữ liệu, xây dựng mô hình dự đoán và diễn giải kết quả phục vụ quyết định."
+    },
+    {
+      "id": "goal_research_lifelong_learning",
+      "type": "Goal",
+      "name": "Nghiên cứu và học tập suốt đời",
+      "description": "Có khả năng đọc tài liệu khoa học, tự học phương pháp mới và cập nhật tri thức AI."
+    },
+    {
+      "id": "plo_computing_math_problem_solving",
+      "type": "PLO",
+      "name": "Áp dụng nguyên tắc tính toán, khoa học và toán học",
+      "description": "Áp dụng nguyên tắc tính toán, khoa học và toán học để xác định, trình bày và giải quyết vấn đề tính toán phức tạp.",
+      "source": "src_uet_ai_2025_plo"
+    },
+    {
+      "id": "plo_system_design",
+      "type": "PLO",
+      "name": "Thiết kế hệ thống đáp ứng nhu cầu cụ thể",
+      "description": "Áp dụng thiết kế hệ thống để tạo giải pháp có cân nhắc yếu tố xã hội, an toàn, môi trường và kinh tế.",
+      "source": "src_uet_ai_2025_plo"
+    },
+    {
+      "id": "plo_data_analysis_solution",
+      "type": "PLO",
+      "name": "Phát triển giải pháp và phân tích dữ liệu",
+      "description": "Phát triển giải pháp phù hợp, phân tích và diễn giải dữ liệu, sử dụng tư duy tính toán để rút ra kết luận.",
+      "source": "src_uet_ai_2025_plo"
+    },
+    {
+      "id": "plo_lifelong_learning",
+      "type": "PLO",
+      "name": "Tiếp thu và áp dụng kiến thức mới",
+      "description": "Có khả năng tiếp thu và áp dụng kiến thức mới khi cần thiết, sử dụng chiến lược học tập phù hợp.",
+      "source": "src_uet_ai_2025_plo"
+    },
+    {
+      "id": "course_computational_thinking",
+      "type": "Course",
+      "name": "Tư duy tính toán",
+      "english_name": "Computational Thinking",
+      "code": "UET.COM1050",
+      "credits": 5,
+      "semester": 1,
+      "course_type": "Bắt buộc",
+      "knowledge_block": "Giáo dục đại cương theo lĩnh vực",
+      "description": "Môn nền tảng giúp hình thành tư duy phân rã bài toán, thiết kế thuật toán và biểu diễn lời giải có thể tính toán.",
+      "source": "src_uet_ai_2025_content"
+    },
+    {
+      "id": "course_linear_algebra",
+      "type": "Course",
+      "name": "Đại số tuyến tính cho kỹ thuật",
+      "english_name": "Linear Algebra for Engineers",
+      "code": "UET.MAT1053",
+      "credits": 5,
+      "semester": 1,
+      "course_type": "Bắt buộc",
+      "knowledge_block": "Giáo dục đại cương theo lĩnh vực",
+      "description": "Môn toán nền tảng về vector, ma trận và biến đổi tuyến tính, cần cho học máy và học sâu.",
+      "source": "src_uet_ai_2025_content"
+    },
+    {
+      "id": "course_probability_statistics",
+      "type": "Course",
+      "name": "Xác suất thống kê",
+      "english_name": "Probability and Statistics",
+      "code": "UET.MAT1052",
+      "credits": 3,
+      "semester": 3,
+      "course_type": "Bắt buộc",
+      "knowledge_block": "Giáo dục đại cương theo lĩnh vực",
+      "description": "Môn cung cấp nền tảng xác suất, phân phối, ước lượng và suy luận thống kê cho mô hình học máy.",
+      "source": "src_uet_ai_2025_content"
+    },
+    {
+      "id": "course_programming_methodology",
+      "type": "Course",
+      "name": "Phương pháp luận lập trình",
+      "english_name": "Programming Methodology",
+      "code": "UET.AI2013",
+      "credits": 3,
+      "semester": 2,
+      "course_type": "Bắt buộc",
+      "knowledge_block": "Cơ sở ngành",
+      "description": "Môn học rèn luyện cách thiết kế, cài đặt và kiểm thử chương trình theo phương pháp có cấu trúc.",
+      "source": "src_uet_ai_2025_content"
+    },
+    {
+      "id": "course_data_structures_algorithms",
+      "type": "Course",
+      "name": "Cấu trúc dữ liệu và giải thuật",
+      "english_name": "Data Structures and Algorithms",
+      "code": "UET.CS1058",
+      "credits": 3,
+      "semester": 2,
+      "course_type": "Bắt buộc",
+      "knowledge_block": "Cơ sở ngành",
+      "description": "Môn nền tảng về tổ chức dữ liệu, thuật toán và phân tích độ phức tạp.",
+      "source": "src_uet_ai_2025_content"
+    },
+    {
+      "id": "course_math_foundations_ai",
+      "type": "Course",
+      "name": "Cơ sở toán học của Trí tuệ nhân tạo",
+      "english_name": "Mathematical Foundations for Artificial Intelligence",
+      "code": "UET.AI2012",
+      "credits": 3,
+      "semester": 4,
+      "course_type": "Bắt buộc",
+      "knowledge_block": "Giáo dục đại cương theo lĩnh vực",
+      "description": "Môn liên kết giải tích, đại số tuyến tính và xác suất thống kê với các bài toán AI.",
+      "source": "src_uet_ai_2025_content"
+    },
+    {
+      "id": "course_knowledge_search",
+      "type": "Course",
+      "name": "Biểu diễn tri thức và tìm kiếm nâng cao",
+      "english_name": "Knowledge Representation and Advanced Searching",
+      "code": "UET.AI2014",
+      "credits": 3,
+      "semester": 3,
+      "course_type": "Bắt buộc",
+      "knowledge_block": "Cơ sở ngành",
+      "description": "Môn học về biểu diễn tri thức, chiến lược tìm kiếm và suy luận trong hệ thống AI.",
+      "source": "src_uet_ai_2025_content"
+    },
+    {
+      "id": "course_ai_systems_engineering",
+      "type": "Course",
+      "name": "Kỹ nghệ hệ thống Trí tuệ nhân tạo",
+      "english_name": "Artificial Intelligence Systems Engineering",
+      "code": "UET.AI3053",
+      "credits": 3,
+      "semester": 4,
+      "course_type": "Bắt buộc",
+      "knowledge_block": "Cốt lõi ngành",
+      "description": "Môn học về thiết kế, tích hợp, kiểm thử và triển khai hệ thống AI theo hướng kỹ nghệ.",
+      "source": "src_uet_ai_2025_content"
+    },
+    {
+      "id": "course_machine_learning",
+      "type": "Course",
+      "name": "Học máy",
+      "english_name": "Machine Learning",
+      "code": "UET.CS3136",
+      "credits": 3,
+      "semester": 4,
+      "course_type": "Bắt buộc",
+      "knowledge_block": "Cốt lõi ngành",
+      "description": "Môn nền tảng về các phương pháp học từ dữ liệu, đánh giá mô hình và tổng quát hóa.",
+      "source": "src_uet_ai_2025_content"
+    },
+    {
+      "id": "course_data_mining",
+      "type": "Course",
+      "name": "Khai phá và phân tích dữ liệu",
+      "english_name": "Data Mining and Analysis",
+      "code": "UET.AI3054",
+      "credits": 3,
+      "semester": 5,
+      "course_type": "Bắt buộc",
+      "knowledge_block": "Cốt lõi ngành",
+      "description": "Môn học về khám phá mẫu, phân cụm, phân loại và diễn giải dữ liệu phục vụ quyết định.",
+      "source": "src_uet_ai_2025_content"
+    },
+    {
+      "id": "course_deep_learning",
+      "type": "Course",
+      "name": "Học sâu",
+      "english_name": "Deep Learning",
+      "code": "UET.AI3056",
+      "credits": 3,
+      "semester": 5,
+      "course_type": "Bắt buộc",
+      "knowledge_block": "Cốt lõi ngành",
+      "description": "Môn học về mạng neural nhiều tầng, lan truyền ngược và các kiến trúc học sâu.",
+      "source": "src_uet_ai_2025_content"
+    },
+    {
+      "id": "course_nlp",
+      "type": "Course",
+      "name": "Xử lý ngôn ngữ tự nhiên",
+      "english_name": "Natural Language Processing",
+      "code": "UET.CS3142",
+      "credits": 3,
+      "semester": 6,
+      "course_type": "Bắt buộc",
+      "knowledge_block": "Cốt lõi ngành",
+      "description": "Môn học về xử lý, biểu diễn và mô hình hóa dữ liệu ngôn ngữ tự nhiên.",
+      "source": "src_uet_ai_2025_content"
+    },
+    {
+      "id": "course_generative_ai",
+      "type": "Course",
+      "name": "Trí tuệ nhân tạo tạo sinh",
+      "english_name": "Generative Artificial Intelligence",
+      "code": "UET.AI3062",
+      "credits": 3,
+      "semester": 7,
+      "course_type": "Tự chọn",
+      "knowledge_block": "Cốt lõi ngành - Định hướng Lý thuyết Trí tuệ nhân tạo",
+      "description": "Môn học về các mô hình tạo sinh và ứng dụng tạo nội dung bằng AI.",
+      "source": "src_uet_ai_2025_content"
+    },
+    {
+      "id": "course_llm_applications",
+      "type": "Course",
+      "name": "Mô hình ngôn ngữ lớn và ứng dụng",
+      "english_name": "Large Language Models and Applications",
+      "code": "UET.AI3067",
+      "credits": 3,
+      "semester": 7,
+      "course_type": "Tự chọn",
+      "knowledge_block": "Cốt lõi ngành - Định hướng Ứng dụng Trí tuệ nhân tạo",
+      "description": "Môn học về mô hình ngôn ngữ lớn, kỹ thuật prompt, tích hợp ứng dụng và đánh giá chất lượng phản hồi.",
+      "source": "src_uet_ai_2025_content"
+    },
+    {
+      "id": "course_recommender_systems",
+      "type": "Course",
+      "name": "Hệ thống khuyến nghị",
+      "english_name": "Recommender Systems",
+      "code": "UET.AI3060",
+      "credits": 3,
+      "semester": 6,
+      "course_type": "Tự chọn",
+      "knowledge_block": "Cốt lõi ngành - Định hướng Ứng dụng Trí tuệ nhân tạo",
+      "description": "Môn học về mô hình hóa sở thích người dùng, lọc cộng tác, khuyến nghị dựa trên nội dung và đánh giá hệ thống khuyến nghị.",
+      "source": "src_uet_ai_2025_content"
+    },
+    {
+      "id": "course_course_project_dsai",
+      "type": "Course",
+      "name": "Đồ án môn học - DSAI",
+      "english_name": "Course Project - DSAI",
+      "code": "UET.AI3057",
+      "credits": 3,
+      "semester": 6,
+      "course_type": "Bắt buộc",
+      "knowledge_block": "Cốt lõi ngành",
+      "description": "Môn dự án giúp sinh viên tích hợp kiến thức học máy, kỹ nghệ hệ thống AI và quy trình phát triển sản phẩm.",
+      "source": "src_uet_ai_2025_content"
+    },
+    {
+      "id": "skill_algorithmic_thinking",
+      "type": "Skill",
+      "name": "Tư duy thuật toán"
+    },
+    {
+      "id": "skill_problem_decomposition",
+      "type": "Skill",
+      "name": "Phân rã bài toán"
+    },
+    {
+      "id": "skill_python_programming",
+      "type": "Skill",
+      "name": "Lập trình Python"
+    },
+    {
+      "id": "skill_program_design",
+      "type": "Skill",
+      "name": "Thiết kế chương trình"
+    },
+    {
+      "id": "skill_data_structures",
+      "type": "Skill",
+      "name": "Cấu trúc dữ liệu"
+    },
+    {
+      "id": "skill_complexity_analysis",
+      "type": "Skill",
+      "name": "Phân tích độ phức tạp"
+    },
+    {
+      "id": "skill_linear_algebra",
+      "type": "Skill",
+      "name": "Đại số tuyến tính"
+    },
+    {
+      "id": "skill_probability_statistics",
+      "type": "Skill",
+      "name": "Xác suất thống kê"
+    },
+    {
+      "id": "skill_optimization",
+      "type": "Skill",
+      "name": "Tối ưu hóa"
+    },
+    {
+      "id": "skill_knowledge_representation",
+      "type": "Skill",
+      "name": "Biểu diễn tri thức"
+    },
+    {
+      "id": "skill_heuristic_search",
+      "type": "Skill",
+      "name": "Tìm kiếm heuristic"
+    },
+    {
+      "id": "skill_supervised_learning",
+      "type": "Skill",
+      "name": "Học có giám sát"
+    },
+    {
+      "id": "skill_unsupervised_learning",
+      "type": "Skill",
+      "name": "Học không giám sát"
+    },
+    {
+      "id": "skill_model_evaluation",
+      "type": "Skill",
+      "name": "Đánh giá mô hình"
+    },
+    {
+      "id": "skill_feature_engineering",
+      "type": "Skill",
+      "name": "Trích chọn đặc trưng"
+    },
+    {
+      "id": "skill_data_mining",
+      "type": "Skill",
+      "name": "Khai phá dữ liệu"
+    },
+    {
+      "id": "skill_data_interpretation",
+      "type": "Skill",
+      "name": "Diễn giải dữ liệu"
+    },
+    {
+      "id": "skill_neural_networks",
+      "type": "Skill",
+      "name": "Mạng neural"
+    },
+    {
+      "id": "skill_backpropagation",
+      "type": "Skill",
+      "name": "Lan truyền ngược"
+    },
+    {
+      "id": "skill_text_preprocessing",
+      "type": "Skill",
+      "name": "Tiền xử lý văn bản"
+    },
+    {
+      "id": "skill_tokenization",
+      "type": "Skill",
+      "name": "Tokenization"
+    },
+    {
+      "id": "skill_text_representation",
+      "type": "Skill",
+      "name": "Biểu diễn văn bản"
+    },
+    {
+      "id": "skill_embeddings",
+      "type": "Skill",
+      "name": "Embedding"
+    },
+    {
+      "id": "skill_attention",
+      "type": "Skill",
+      "name": "Attention mechanism"
+    },
+    {
+      "id": "skill_transformer",
+      "type": "Skill",
+      "name": "Transformer"
+    },
+    {
+      "id": "skill_prompt_engineering",
+      "type": "Skill",
+      "name": "Kỹ thuật thiết kế prompt"
+    },
+    {
+      "id": "skill_text_generation",
+      "type": "Skill",
+      "name": "Sinh văn bản"
+    },
+    {
+      "id": "skill_llm_evaluation",
+      "type": "Skill",
+      "name": "Đánh giá LLM"
+    },
+    {
+      "id": "skill_information_retrieval",
+      "type": "Skill",
+      "name": "Truy hồi thông tin"
+    },
+    {
+      "id": "skill_vector_search",
+      "type": "Skill",
+      "name": "Tìm kiếm vector"
+    },
+    {
+      "id": "skill_rag",
+      "type": "Skill",
+      "name": "Retrieval-Augmented Generation"
+    },
+    {
+      "id": "skill_user_modeling",
+      "type": "Skill",
+      "name": "Mô hình hóa người dùng"
+    },
+    {
+      "id": "skill_collaborative_filtering",
+      "type": "Skill",
+      "name": "Lọc cộng tác"
+    },
+    {
+      "id": "skill_content_based_recommendation",
+      "type": "Skill",
+      "name": "Khuyến nghị dựa trên nội dung"
+    },
+    {
+      "id": "skill_ai_system_deployment",
+      "type": "Skill",
+      "name": "Triển khai hệ thống AI"
+    },
+    {
+      "id": "skill_experiment_tracking",
+      "type": "Skill",
+      "name": "Theo dõi thực nghiệm"
+    },
+    {
+      "id": "skill_research_reading",
+      "type": "Skill",
+      "name": "Đọc và phân tích tài liệu khoa học"
+    }
+  ],
+  "edges": [
+    {
+      "source": "program_uet_ai",
+      "relation": "contains_course",
+      "target": "course_computational_thinking",
+      "evidence": "Course appears in the UET AI curriculum.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "program_uet_ai",
+      "relation": "contains_course",
+      "target": "course_linear_algebra",
+      "evidence": "Course appears in the UET AI curriculum.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "program_uet_ai",
+      "relation": "contains_course",
+      "target": "course_probability_statistics",
+      "evidence": "Course appears in the UET AI curriculum.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "program_uet_ai",
+      "relation": "contains_course",
+      "target": "course_programming_methodology",
+      "evidence": "Course appears in the UET AI curriculum.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "program_uet_ai",
+      "relation": "contains_course",
+      "target": "course_data_structures_algorithms",
+      "evidence": "Course appears in the UET AI curriculum.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "program_uet_ai",
+      "relation": "contains_course",
+      "target": "course_math_foundations_ai",
+      "evidence": "Course appears in the UET AI curriculum.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "program_uet_ai",
+      "relation": "contains_course",
+      "target": "course_knowledge_search",
+      "evidence": "Course appears in the UET AI curriculum.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "program_uet_ai",
+      "relation": "contains_course",
+      "target": "course_ai_systems_engineering",
+      "evidence": "Course appears in the UET AI curriculum.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "program_uet_ai",
+      "relation": "contains_course",
+      "target": "course_machine_learning",
+      "evidence": "Course appears in the UET AI curriculum.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "program_uet_ai",
+      "relation": "contains_course",
+      "target": "course_data_mining",
+      "evidence": "Course appears in the UET AI curriculum.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "program_uet_ai",
+      "relation": "contains_course",
+      "target": "course_deep_learning",
+      "evidence": "Course appears in the UET AI curriculum.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "program_uet_ai",
+      "relation": "contains_course",
+      "target": "course_nlp",
+      "evidence": "Course appears in the UET AI curriculum.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "program_uet_ai",
+      "relation": "contains_course",
+      "target": "course_generative_ai",
+      "evidence": "Course appears in the UET AI curriculum as an elective.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "program_uet_ai",
+      "relation": "contains_course",
+      "target": "course_llm_applications",
+      "evidence": "Course appears in the UET AI curriculum as an elective.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "program_uet_ai",
+      "relation": "contains_course",
+      "target": "course_recommender_systems",
+      "evidence": "Course appears in the UET AI curriculum as an elective.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "program_uet_ai",
+      "relation": "contains_course",
+      "target": "course_course_project_dsai",
+      "evidence": "Course appears in the UET AI curriculum.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_programming_methodology",
+      "relation": "requires",
+      "target": "course_computational_thinking",
+      "evidence": "UET prerequisite lists UET.COM1050 for Programming Methodology.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_data_structures_algorithms",
+      "relation": "requires",
+      "target": "course_computational_thinking",
+      "evidence": "UET prerequisite lists UET.COM1050 for Data Structures and Algorithms.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_probability_statistics",
+      "relation": "requires",
+      "target": "course_computational_thinking",
+      "evidence": "The curriculum places probability after foundational first-year courses; this edge is used as a pedagogical readiness relation.",
+      "source_type": "curated",
+      "confidence": 0.7,
+      "verified": true
+    },
+    {
+      "source": "course_math_foundations_ai",
+      "relation": "requires",
+      "target": "course_linear_algebra",
+      "evidence": "UET prerequisite lists UET.MAT1053 for Mathematical Foundations for AI.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_math_foundations_ai",
+      "relation": "requires",
+      "target": "course_probability_statistics",
+      "evidence": "UET prerequisite lists UET.MAT1052 for Mathematical Foundations for AI.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_knowledge_search",
+      "relation": "requires",
+      "target": "course_data_structures_algorithms",
+      "evidence": "UET prerequisite lists UET.CS1058 for Knowledge Representation and Advanced Searching.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_ai_systems_engineering",
+      "relation": "requires",
+      "target": "course_knowledge_search",
+      "evidence": "UET prerequisite lists UET.AI2014 for AI Systems Engineering.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_ai_systems_engineering",
+      "relation": "requires",
+      "target": "course_data_structures_algorithms",
+      "evidence": "UET prerequisite lists UET.CS1058 for AI Systems Engineering.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_machine_learning",
+      "relation": "requires",
+      "target": "course_computational_thinking",
+      "evidence": "UET prerequisite lists UET.COM1050 for Machine Learning.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_machine_learning",
+      "relation": "requires",
+      "target": "course_probability_statistics",
+      "evidence": "UET prerequisite lists UET.MAT1052 for Machine Learning.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_data_mining",
+      "relation": "requires",
+      "target": "course_data_structures_algorithms",
+      "evidence": "UET prerequisite lists UET.CS1058 for Data Mining and Analysis.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_data_mining",
+      "relation": "requires",
+      "target": "course_probability_statistics",
+      "evidence": "UET prerequisite lists UET.MAT1052 for Data Mining and Analysis.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_deep_learning",
+      "relation": "requires",
+      "target": "course_machine_learning",
+      "evidence": "UET prerequisite lists UET.CS3136 for Deep Learning.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_nlp",
+      "relation": "requires",
+      "target": "course_data_structures_algorithms",
+      "evidence": "UET prerequisite lists UET.CS1058 for Natural Language Processing.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_generative_ai",
+      "relation": "requires",
+      "target": "course_deep_learning",
+      "evidence": "UET prerequisite lists UET.AI3056 for Generative Artificial Intelligence.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_llm_applications",
+      "relation": "requires",
+      "target": "course_nlp",
+      "evidence": "UET prerequisite lists UET.CS3142 for Large Language Models and Applications.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_recommender_systems",
+      "relation": "requires",
+      "target": "course_math_foundations_ai",
+      "evidence": "UET prerequisite lists UET.AI2012 for Recommender Systems.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_recommender_systems",
+      "relation": "requires",
+      "target": "course_machine_learning",
+      "evidence": "UET prerequisite lists UET.CS3136 for Recommender Systems.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_course_project_dsai",
+      "relation": "requires",
+      "target": "course_ai_systems_engineering",
+      "evidence": "UET prerequisite lists UET.AI3053 for Course Project - DSAI.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_course_project_dsai",
+      "relation": "requires",
+      "target": "course_machine_learning",
+      "evidence": "UET prerequisite lists UET.CS3136 for Course Project - DSAI.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_computational_thinking",
+      "relation": "belongs_to_topic",
+      "target": "topic_programming_foundation",
+      "evidence": "Course title and curriculum position indicate programming and computational foundations.",
+      "source_type": "curated",
+      "confidence": 0.9,
+      "verified": true
+    },
+    {
+      "source": "course_programming_methodology",
+      "relation": "belongs_to_topic",
+      "target": "topic_programming_foundation",
+      "evidence": "Course title indicates programming foundation.",
+      "source_type": "curated",
+      "confidence": 0.95,
+      "verified": true
+    },
+    {
+      "source": "course_data_structures_algorithms",
+      "relation": "belongs_to_topic",
+      "target": "topic_programming_foundation",
+      "evidence": "Course title indicates algorithmic programming foundation.",
+      "source_type": "curated",
+      "confidence": 0.95,
+      "verified": true
+    },
+    {
+      "source": "course_linear_algebra",
+      "relation": "belongs_to_topic",
+      "target": "topic_math_foundation",
+      "evidence": "Course title indicates mathematical foundation.",
+      "source_type": "curated",
+      "confidence": 0.95,
+      "verified": true
+    },
+    {
+      "source": "course_probability_statistics",
+      "relation": "belongs_to_topic",
+      "target": "topic_math_foundation",
+      "evidence": "Course title indicates mathematical foundation.",
+      "source_type": "curated",
+      "confidence": 0.95,
+      "verified": true
+    },
+    {
+      "source": "course_math_foundations_ai",
+      "relation": "belongs_to_topic",
+      "target": "topic_math_foundation",
+      "evidence": "Course title indicates mathematical foundations for AI.",
+      "source_type": "curated",
+      "confidence": 0.95,
+      "verified": true
+    },
+    {
+      "source": "course_knowledge_search",
+      "relation": "belongs_to_topic",
+      "target": "topic_knowledge_search",
+      "evidence": "Course title indicates knowledge representation and search.",
+      "source_type": "curated",
+      "confidence": 0.95,
+      "verified": true
+    },
+    {
+      "source": "course_ai_systems_engineering",
+      "relation": "belongs_to_topic",
+      "target": "topic_ai_systems",
+      "evidence": "Course title indicates AI systems engineering.",
+      "source_type": "curated",
+      "confidence": 0.95,
+      "verified": true
+    },
+    {
+      "source": "course_machine_learning",
+      "relation": "belongs_to_topic",
+      "target": "topic_machine_learning",
+      "evidence": "Course title indicates machine learning.",
+      "source_type": "curated",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_data_mining",
+      "relation": "belongs_to_topic",
+      "target": "topic_machine_learning",
+      "evidence": "Data mining is closely connected to machine learning methods for pattern discovery.",
+      "source_type": "curated",
+      "confidence": 0.85,
+      "verified": true
+    },
+    {
+      "source": "course_deep_learning",
+      "relation": "belongs_to_topic",
+      "target": "topic_deep_learning",
+      "evidence": "Course title indicates deep learning.",
+      "source_type": "curated",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_nlp",
+      "relation": "belongs_to_topic",
+      "target": "topic_nlp",
+      "evidence": "Course title indicates natural language processing.",
+      "source_type": "curated",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_generative_ai",
+      "relation": "belongs_to_topic",
+      "target": "topic_generative_ai",
+      "evidence": "Course title indicates generative AI.",
+      "source_type": "curated",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_llm_applications",
+      "relation": "belongs_to_topic",
+      "target": "topic_generative_ai",
+      "evidence": "Large language models are a central family of generative AI systems.",
+      "source_type": "curated",
+      "confidence": 0.9,
+      "verified": true
+    },
+    {
+      "source": "course_llm_applications",
+      "relation": "belongs_to_topic",
+      "target": "topic_nlp",
+      "evidence": "Large language models build on natural language processing.",
+      "source_type": "curated",
+      "confidence": 0.9,
+      "verified": true
+    },
+    {
+      "source": "course_recommender_systems",
+      "relation": "belongs_to_topic",
+      "target": "topic_recommender_systems",
+      "evidence": "Course title indicates recommender systems.",
+      "source_type": "curated",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_course_project_dsai",
+      "relation": "belongs_to_topic",
+      "target": "topic_ai_systems",
+      "evidence": "Course project integrates knowledge into an AI system artifact.",
+      "source_type": "curated",
+      "confidence": 0.85,
+      "verified": true
+    },
+    {
+      "source": "course_computational_thinking",
+      "relation": "teaches",
+      "target": "skill_algorithmic_thinking",
+      "evidence": "Computational thinking teaches algorithmic reasoning.",
+      "source_type": "curated",
+      "confidence": 0.9,
+      "verified": true
+    },
+    {
+      "source": "course_computational_thinking",
+      "relation": "teaches",
+      "target": "skill_problem_decomposition",
+      "evidence": "Problem decomposition is a core part of computational thinking.",
+      "source_type": "curated",
+      "confidence": 0.9,
+      "verified": true
+    },
+    {
+      "source": "course_programming_methodology",
+      "relation": "teaches",
+      "target": "skill_python_programming",
+      "evidence": "Programming methodology supports basic programming skill; Python is used as the demo implementation language.",
+      "source_type": "curated",
+      "confidence": 0.75,
+      "verified": true
+    },
+    {
+      "source": "course_programming_methodology",
+      "relation": "teaches",
+      "target": "skill_program_design",
+      "evidence": "Course title implies program design and implementation methodology.",
+      "source_type": "curated",
+      "confidence": 0.85,
+      "verified": true
+    },
+    {
+      "source": "course_data_structures_algorithms",
+      "relation": "teaches",
+      "target": "skill_data_structures",
+      "evidence": "Course title directly maps to data structures.",
+      "source_type": "curated",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_data_structures_algorithms",
+      "relation": "teaches",
+      "target": "skill_complexity_analysis",
+      "evidence": "Algorithm courses normally include complexity analysis.",
+      "source_type": "curated",
+      "confidence": 0.85,
+      "verified": true
+    },
+    {
+      "source": "course_linear_algebra",
+      "relation": "teaches",
+      "target": "skill_linear_algebra",
+      "evidence": "Course title directly maps to linear algebra skill.",
+      "source_type": "curated",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_probability_statistics",
+      "relation": "teaches",
+      "target": "skill_probability_statistics",
+      "evidence": "Course title directly maps to probability and statistics skill.",
+      "source_type": "curated",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_math_foundations_ai",
+      "relation": "teaches",
+      "target": "skill_optimization",
+      "evidence": "Mathematical foundations for AI commonly cover optimization concepts for model training.",
+      "source_type": "curated",
+      "confidence": 0.8,
+      "verified": true
+    },
+    {
+      "source": "course_math_foundations_ai",
+      "relation": "teaches",
+      "target": "skill_linear_algebra",
+      "evidence": "Course prerequisites and title indicate use of linear algebra for AI.",
+      "source_type": "curated",
+      "confidence": 0.8,
+      "verified": true
+    },
+    {
+      "source": "course_knowledge_search",
+      "relation": "teaches",
+      "target": "skill_knowledge_representation",
+      "evidence": "Course title directly maps to knowledge representation.",
+      "source_type": "curated",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_knowledge_search",
+      "relation": "teaches",
+      "target": "skill_heuristic_search",
+      "evidence": "Advanced search courses commonly teach heuristic search methods.",
+      "source_type": "curated",
+      "confidence": 0.9,
+      "verified": true
+    },
+    {
+      "source": "course_machine_learning",
+      "relation": "teaches",
+      "target": "skill_supervised_learning",
+      "evidence": "Supervised learning is a core machine learning skill.",
+      "source_type": "curated",
+      "confidence": 0.95,
+      "verified": true
+    },
+    {
+      "source": "course_machine_learning",
+      "relation": "teaches",
+      "target": "skill_unsupervised_learning",
+      "evidence": "Unsupervised learning is a common machine learning topic.",
+      "source_type": "curated",
+      "confidence": 0.9,
+      "verified": true
+    },
+    {
+      "source": "course_machine_learning",
+      "relation": "teaches",
+      "target": "skill_model_evaluation",
+      "evidence": "Model evaluation is necessary for machine learning workflows.",
+      "source_type": "curated",
+      "confidence": 0.9,
+      "verified": true
+    },
+    {
+      "source": "course_machine_learning",
+      "relation": "teaches",
+      "target": "skill_feature_engineering",
+      "evidence": "Feature engineering is a common part of classical machine learning workflows.",
+      "source_type": "curated",
+      "confidence": 0.85,
+      "verified": true
+    },
+    {
+      "source": "course_data_mining",
+      "relation": "teaches",
+      "target": "skill_data_mining",
+      "evidence": "Course title directly maps to data mining.",
+      "source_type": "curated",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_data_mining",
+      "relation": "teaches",
+      "target": "skill_data_interpretation",
+      "evidence": "Data analysis courses require interpreting patterns and model outputs.",
+      "source_type": "curated",
+      "confidence": 0.9,
+      "verified": true
+    },
+    {
+      "source": "course_deep_learning",
+      "relation": "teaches",
+      "target": "skill_neural_networks",
+      "evidence": "Neural networks are central to deep learning.",
+      "source_type": "curated",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_deep_learning",
+      "relation": "teaches",
+      "target": "skill_backpropagation",
+      "evidence": "Backpropagation is a core training mechanism in deep learning.",
+      "source_type": "curated",
+      "confidence": 0.95,
+      "verified": true
+    },
+    {
+      "source": "course_deep_learning",
+      "relation": "teaches",
+      "target": "skill_attention",
+      "evidence": "Modern deep learning courses often introduce attention as a core neural architecture component.",
+      "source_type": "curated",
+      "confidence": 0.75,
+      "verified": true
+    },
+    {
+      "source": "course_nlp",
+      "relation": "teaches",
+      "target": "skill_text_preprocessing",
+      "evidence": "Text preprocessing is a core NLP workflow step.",
+      "source_type": "curated",
+      "confidence": 0.95,
+      "verified": true
+    },
+    {
+      "source": "course_nlp",
+      "relation": "teaches",
+      "target": "skill_tokenization",
+      "evidence": "Tokenization is a core NLP preprocessing skill.",
+      "source_type": "curated",
+      "confidence": 0.95,
+      "verified": true
+    },
+    {
+      "source": "course_nlp",
+      "relation": "teaches",
+      "target": "skill_text_representation",
+      "evidence": "NLP requires representing text numerically for downstream models.",
+      "source_type": "curated",
+      "confidence": 0.95,
+      "verified": true
+    },
+    {
+      "source": "course_nlp",
+      "relation": "teaches",
+      "target": "skill_embeddings",
+      "evidence": "Embeddings are a core text representation method in NLP.",
+      "source_type": "curated",
+      "confidence": 0.9,
+      "verified": true
+    },
+    {
+      "source": "course_generative_ai",
+      "relation": "teaches",
+      "target": "skill_text_generation",
+      "evidence": "Generative AI includes generating text and other content.",
+      "source_type": "curated",
+      "confidence": 0.85,
+      "verified": true
+    },
+    {
+      "source": "course_generative_ai",
+      "relation": "teaches",
+      "target": "skill_transformer",
+      "evidence": "Transformer-based models are central to modern generative AI.",
+      "source_type": "curated",
+      "confidence": 0.85,
+      "verified": true
+    },
+    {
+      "source": "course_llm_applications",
+      "relation": "teaches",
+      "target": "skill_prompt_engineering",
+      "evidence": "Prompt engineering is a core application skill for LLM-based systems.",
+      "source_type": "curated",
+      "confidence": 0.95,
+      "verified": true
+    },
+    {
+      "source": "course_llm_applications",
+      "relation": "teaches",
+      "target": "skill_llm_evaluation",
+      "evidence": "LLM applications require evaluating factuality, usefulness and task performance.",
+      "source_type": "curated",
+      "confidence": 0.9,
+      "verified": true
+    },
+    {
+      "source": "course_llm_applications",
+      "relation": "teaches",
+      "target": "skill_rag",
+      "evidence": "RAG is a common LLM application architecture combining retrieval and generation.",
+      "source_type": "curated",
+      "confidence": 0.85,
+      "verified": true
+    },
+    {
+      "source": "course_llm_applications",
+      "relation": "teaches",
+      "target": "skill_information_retrieval",
+      "evidence": "LLM applications often use retrieval to ground generated responses.",
+      "source_type": "curated",
+      "confidence": 0.8,
+      "verified": true
+    },
+    {
+      "source": "course_llm_applications",
+      "relation": "teaches",
+      "target": "skill_vector_search",
+      "evidence": "Vector search is a common retrieval layer in RAG systems.",
+      "source_type": "curated",
+      "confidence": 0.8,
+      "verified": true
+    },
+    {
+      "source": "course_recommender_systems",
+      "relation": "teaches",
+      "target": "skill_user_modeling",
+      "evidence": "Recommender systems require modeling user preferences.",
+      "source_type": "curated",
+      "confidence": 0.9,
+      "verified": true
+    },
+    {
+      "source": "course_recommender_systems",
+      "relation": "teaches",
+      "target": "skill_collaborative_filtering",
+      "evidence": "Collaborative filtering is a core recommender-system technique.",
+      "source_type": "curated",
+      "confidence": 0.95,
+      "verified": true
+    },
+    {
+      "source": "course_recommender_systems",
+      "relation": "teaches",
+      "target": "skill_content_based_recommendation",
+      "evidence": "Content-based recommendation is a core recommender-system technique.",
+      "source_type": "curated",
+      "confidence": 0.95,
+      "verified": true
+    },
+    {
+      "source": "course_ai_systems_engineering",
+      "relation": "teaches",
+      "target": "skill_ai_system_deployment",
+      "evidence": "AI systems engineering covers deployment and integration concerns.",
+      "source_type": "curated",
+      "confidence": 0.9,
+      "verified": true
+    },
+    {
+      "source": "course_ai_systems_engineering",
+      "relation": "teaches",
+      "target": "skill_experiment_tracking",
+      "evidence": "Engineering AI systems benefits from tracking experiments and model changes.",
+      "source_type": "curated",
+      "confidence": 0.75,
+      "verified": true
+    },
+    {
+      "source": "course_course_project_dsai",
+      "relation": "teaches",
+      "target": "skill_ai_system_deployment",
+      "evidence": "A DSAI course project requires integrating and demonstrating an AI artifact.",
+      "source_type": "curated",
+      "confidence": 0.85,
+      "verified": true
+    },
+    {
+      "source": "course_course_project_dsai",
+      "relation": "teaches",
+      "target": "skill_research_reading",
+      "evidence": "Course projects often require reading related methods and justifying design choices.",
+      "source_type": "curated",
+      "confidence": 0.7,
+      "verified": true
+    },
+    {
+      "source": "course_machine_learning",
+      "relation": "prepares_for",
+      "target": "course_deep_learning",
+      "evidence": "Deep Learning officially requires Machine Learning in the curriculum.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_deep_learning",
+      "relation": "prepares_for",
+      "target": "course_generative_ai",
+      "evidence": "Generative AI officially requires Deep Learning in the curriculum.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_nlp",
+      "relation": "prepares_for",
+      "target": "course_llm_applications",
+      "evidence": "LLM Applications officially requires NLP in the curriculum.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_machine_learning",
+      "relation": "prepares_for",
+      "target": "course_recommender_systems",
+      "evidence": "Recommender Systems officially requires Machine Learning in the curriculum.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_ai_systems_engineering",
+      "relation": "prepares_for",
+      "target": "course_course_project_dsai",
+      "evidence": "Course Project officially requires AI Systems Engineering.",
+      "source_type": "official_curriculum",
+      "confidence": 1.0,
+      "verified": true
+    },
+    {
+      "source": "course_nlp",
+      "relation": "similar_to",
+      "target": "course_llm_applications",
+      "evidence": "Both courses focus on language data and language models, but at different levels of abstraction.",
+      "source_type": "curated",
+      "confidence": 0.8,
+      "similarity_score": 0.82,
+      "verified": true
+    },
+    {
+      "source": "course_generative_ai",
+      "relation": "similar_to",
+      "target": "course_llm_applications",
+      "evidence": "LLMs are a central case of generative AI, especially for text generation.",
+      "source_type": "curated",
+      "confidence": 0.85,
+      "similarity_score": 0.86,
+      "verified": true
+    },
+    {
+      "source": "course_machine_learning",
+      "relation": "similar_to",
+      "target": "course_data_mining",
+      "evidence": "Both courses use data-driven modeling and pattern discovery.",
+      "source_type": "curated",
+      "confidence": 0.8,
+      "similarity_score": 0.78,
+      "verified": true
+    },
+    {
+      "source": "course_recommender_systems",
+      "relation": "similar_to",
+      "target": "course_llm_applications",
+      "evidence": "Both courses involve personalized or context-aware information delivery, though with different model families.",
+      "source_type": "curated",
+      "confidence": 0.65,
+      "similarity_score": 0.58,
+      "verified": true
+    },
+    {
+      "source": "course_machine_learning",
+      "relation": "supports_goal",
+      "target": "goal_data_decision",
+      "evidence": "Machine learning enables predictive modeling and data-driven decision making.",
+      "source_type": "curated",
+      "confidence": 0.9,
+      "verified": true
+    },
+    {
+      "source": "course_data_mining",
+      "relation": "supports_goal",
+      "target": "goal_data_decision",
+      "evidence": "Data mining directly supports discovering patterns and interpreting data.",
+      "source_type": "curated",
+      "confidence": 0.95,
+      "verified": true
+    },
+    {
+      "source": "course_nlp",
+      "relation": "supports_goal",
+      "target": "goal_nlp_engineer",
+      "evidence": "NLP is the central technical foundation for an NLP engineering path.",
+      "source_type": "curated",
+      "confidence": 0.98,
+      "verified": true
+    },
+    {
+      "source": "course_llm_applications",
+      "relation": "supports_goal",
+      "target": "goal_llm_app_builder",
+      "evidence": "The course directly covers large language models and applications.",
+      "source_type": "curated",
+      "confidence": 0.98,
+      "verified": true
+    },
+    {
+      "source": "course_llm_applications",
+      "relation": "supports_goal",
+      "target": "goal_rag_system_builder",
+      "evidence": "LLM applications commonly include RAG-style grounded QA systems.",
+      "source_type": "curated",
+      "confidence": 0.86,
+      "verified": true
+    },
+    {
+      "source": "course_ai_systems_engineering",
+      "relation": "supports_goal",
+      "target": "goal_ai_system_engineer",
+      "evidence": "AI systems engineering teaches system-level development and deployment thinking.",
+      "source_type": "curated",
+      "confidence": 0.95,
+      "verified": true
+    },
+    {
+      "source": "course_course_project_dsai",
+      "relation": "supports_goal",
+      "target": "goal_ai_system_engineer",
+      "evidence": "A course project helps students integrate models into a working AI artifact.",
+      "source_type": "curated",
+      "confidence": 0.9,
+      "verified": true
+    },
+    {
+      "source": "course_generative_ai",
+      "relation": "supports_goal",
+      "target": "goal_llm_app_builder",
+      "evidence": "Generative AI gives conceptual background for LLM-based content generation.",
+      "source_type": "curated",
+      "confidence": 0.8,
+      "verified": true
+    },
+    {
+      "source": "course_recommender_systems",
+      "relation": "supports_goal",
+      "target": "goal_data_decision",
+      "evidence": "Recommender systems use data to support personalized decisions.",
+      "source_type": "curated",
+      "confidence": 0.85,
+      "verified": true
+    },
+    {
+      "source": "course_recommender_systems",
+      "relation": "supports_goal",
+      "target": "goal_ai_system_engineer",
+      "evidence": "Recommender systems are a practical AI system family with real-world product use.",
+      "source_type": "curated",
+      "confidence": 0.75,
+      "verified": true
+    },
+    {
+      "source": "course_knowledge_search",
+      "relation": "supports_goal",
+      "target": "goal_rag_system_builder",
+      "evidence": "Knowledge representation and search provide conceptual background for retrieval-augmented systems.",
+      "source_type": "curated",
+      "confidence": 0.75,
+      "verified": true
+    },
+    {
+      "source": "course_course_project_dsai",
+      "relation": "supports_goal",
+      "target": "goal_research_lifelong_learning",
+      "evidence": "A course project encourages independent reading, implementation and reflection.",
+      "source_type": "curated",
+      "confidence": 0.75,
+      "verified": true
+    },
+    {
+      "source": "course_computational_thinking",
+      "relation": "contributes_to",
+      "target": "plo_computing_math_problem_solving",
+      "evidence": "Computational thinking supports solving complex computing problems.",
+      "source_type": "curated",
+      "confidence": 0.9,
+      "verified": true
+    },
+    {
+      "source": "course_linear_algebra",
+      "relation": "contributes_to",
+      "target": "plo_computing_math_problem_solving",
+      "evidence": "Linear algebra is a mathematical foundation for AI problem solving.",
+      "source_type": "curated",
+      "confidence": 0.9,
+      "verified": true
+    },
+    {
+      "source": "course_probability_statistics",
+      "relation": "contributes_to",
+      "target": "plo_computing_math_problem_solving",
+      "evidence": "Probability and statistics support mathematical reasoning for AI.",
+      "source_type": "curated",
+      "confidence": 0.9,
+      "verified": true
+    },
+    {
+      "source": "course_machine_learning",
+      "relation": "contributes_to",
+      "target": "plo_data_analysis_solution",
+      "evidence": "Machine learning develops data-driven solution building and interpretation.",
+      "source_type": "curated",
+      "confidence": 0.9,
+      "verified": true
+    },
+    {
+      "source": "course_data_mining",
+      "relation": "contributes_to",
+      "target": "plo_data_analysis_solution",
+      "evidence": "Data mining directly supports data analysis and interpretation.",
+      "source_type": "curated",
+      "confidence": 0.9,
+      "verified": true
+    },
+    {
+      "source": "course_ai_systems_engineering",
+      "relation": "contributes_to",
+      "target": "plo_system_design",
+      "evidence": "AI systems engineering maps to system design and deployment outcomes.",
+      "source_type": "curated",
+      "confidence": 0.95,
+      "verified": true
+    },
+    {
+      "source": "course_llm_applications",
+      "relation": "contributes_to",
+      "target": "plo_system_design",
+      "evidence": "LLM applications require system design, integration and evaluation choices.",
+      "source_type": "curated",
+      "confidence": 0.8,
+      "verified": true
+    },
+    {
+      "source": "course_course_project_dsai",
+      "relation": "contributes_to",
+      "target": "plo_lifelong_learning",
+      "evidence": "Project work requires independent learning and applying new knowledge.",
+      "source_type": "curated",
+      "confidence": 0.85,
+      "verified": true
+    }
+  ]
+}
