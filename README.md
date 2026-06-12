@@ -103,12 +103,16 @@ project/
 │
 ├── backend/
 │   ├── .env
+│   ├── data
+│   │   ├── kg_ai_uet_demo.json
+│   ├── kg
+│   │   ├── graph_loader.py
+│   │   ├── graph_query.py
+│   │   ├── retriever.py
 │   ├── context_builder.py
 │   ├── intent_classifier.py
-│   ├── knowledge_graph.py
 │   ├── llm_service.py
 │   ├── main.py
-│   └── seed_kg.py
 │
 ├── frontend/
 │   ├── src/
