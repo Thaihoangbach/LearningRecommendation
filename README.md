@@ -102,11 +102,13 @@ Khi chatbot không đủ khả năng hỗ trợ:
 project/
 │
 ├── backend/
+│   ├── .env
+│   ├── context_builder.py
+│   ├── intent_classifier.py
+│   ├── knowledge_graph.py
+│   ├── llm_service.py
 │   ├── main.py
-│   ├── recommender.py
-│   ├── chatbot.py
-│   ├── mentor.py
-│   └── data/
+│   └── seed_kg.py
 │
 ├── frontend/
 │   ├── src/
